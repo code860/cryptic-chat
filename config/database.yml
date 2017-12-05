@@ -23,5 +23,5 @@ test:
 production:
   <<: *default
   database: cryptic_chat
-  username: <%= ENV.fetch('CRYPTIC_DB_USERNAME') %>
-  password: <%= ENV.fetch('CRYPTIC_DB_PASS') %>
+  username: <%= ENV.fetch('CRYPTIC_DB_USERNAME') {}%>
+  password: <%= ENV.fetch('CRYPTIC_DB_PASS') {}%>

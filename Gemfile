@@ -35,6 +35,7 @@ gem 'pg'
 # gem 'capistrano-rails', group: :development
 gem 'devise'
 gem 'omniauth'
+gem "attr_encrypted", "~> 3.0.0"
 
 gem 'react_on_rails', '10.0.2'
 
