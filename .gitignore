@@ -22,3 +22,6 @@
 .rks/*
 .byebug_history
 pseudo.rb
+/public/packs
+/public/packs-test
+/node_modules
