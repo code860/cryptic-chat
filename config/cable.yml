@@ -1,12 +1,10 @@
 development:
   adapter: redis
   url: redis://localhost:6379/1
-  channel_prefix: cryptic_chat_production
-  
+
 test:
   adapter: async
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: cryptic_chat_production
+  url: <%=ENV['REDIS_CHAT_CABLE_URL']%>

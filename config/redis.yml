@@ -1,0 +1,25 @@
+default: &default
+  host: redis://localhost:6379
+development_key_pass:
+  <<: *default
+  db: 2
+  namespace: chat_session_key_pass_dev
+development_sidekiq:
+  <<: *default
+  db: 3
+  namespace: sidekiq_development
+test_key_pass:
+  <<: *default
+  db: 5
+  namespace: chat_session_keypass_test
+test_sidekiq:
+ <<: *default
+ db: 6
+ namespace: sidekiq_test
+production_key_pass:
+  host: <%=ENV["REDIS_PRODUCTION_KEY_PASS_HOST"]%>
+  namespace: <%=ENV['REDIS_PRODUCTION_KEY_PASS_NAMESPACE']%>
+  #db: <%=ENV['REDIS_KEY_PASS_PRDUCTION_DB']%>
+  #password: <%=ENV['REDIS_KEY_PASS_PRDUCTION_PASSWORD']%>
+production_sidekiq:
+  host: <%ENV['REDIS_PRODUCTION_SIDEKIQ_HOST']%>

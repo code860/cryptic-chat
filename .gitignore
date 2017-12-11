@@ -23,5 +23,7 @@
 .byebug_history
 pseudo.rb
 /public/packs
+/public/webpack
 /public/packs-test
 /node_modules
+/services

@@ -1,0 +1,16 @@
+default: &default
+  :verbose: false
+  :pidfile: ./tmp/pids/sidekiq.pid
+development:
+  <<: *default
+  concurrency: 16
+test:
+  concurrency: 16
+  <<: *default
+production:
+  concurrency: 20
+:queues:
+  - [critical, 100]
+  - [normal, 50]
+  - [default, 10]
+  - [low, 1]
